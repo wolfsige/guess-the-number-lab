@@ -1,42 +1,34 @@
 
 
 
-let prevGuess = []
-
 const game = {
   title: 'Guess the Number!',
   biggestNum: 100,
   smallestNum: 1,
   secretNum: null,
+  prevGuesses: [],
 
   play: function() {
-    if (getGuess = true){
-
-      guess.push(prevGuess)
-
     this.secretNum = Math.floor(Math.random() * 
       (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
-    } else {
+    console.log(this.secretNum)
+  },
+  getGuess: function(){
+    let guess = prompt(`Enter a guess between ${this.smallestNum} and ${this.biggestNum}!`)
+    guess = parseInt(guess)
+    console.log(guess)
+    
+    let valid = 
+    do {
       
-    }
+      //do this while guess is invalid
+      if(guess >= this.biggestNum || guess <= this.smallestNum){
+        
+        console.log('error')
+      }
+    } while ()
+  },
+  render: function(){
+    // code to render (you'll get to this later in the lab)
   }
 }
-
-  let getGuess = function(guess){
-      result = window.prompt(`Enter a guess between ${smallestNum} and ${biggestNum}`)
-
-    do {
-      if(guess > secretNum){
-        prevGuess.push(guess)
-        return guess + ' was too high. Here is what youve guessed so far ' + prevGuess
-        
-      } else {
-        prevGuess.push(guess)
-        return guess + ' was too low. Here is what youve guessed so far ' + prevGuess
-      }
-      
-       
-    } while (guess !== secretNum);
-  }
-
-  
